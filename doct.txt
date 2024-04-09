@@ -1,0 +1,12 @@
+pip install pipenv
+pipenv install django
+django-admin startproject firstdjango .
+pipenv --virtualenvs
+python manage.py runserver
+C:\Users\Aakash\.virtualenvs\first-django-ZPM0vSXo/Scripts/activate
+python manage.py startapp payground 
+pipenv install django-debug-toolbar
+pipenv install pymysql
+pipenv install djangorestframework
+pipenv install djangorestframework-simplejwt
+install djangorestframework markdown django-filter

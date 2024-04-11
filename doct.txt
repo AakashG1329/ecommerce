@@ -4,6 +4,7 @@ django-admin startproject firstdjango .
 pipenv --virtualenvs
 python manage.py runserver
 C:\Users\Aakash\.virtualenvs\first-django-ZPM0vSXo/Scripts/activate
+django-admin startapp products
 python manage.py startapp payground 
 pipenv install django-debug-toolbar
 pipenv install pymysql

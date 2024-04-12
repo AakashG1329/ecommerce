@@ -17,26 +17,26 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rest_framework import routers, serializers, viewsets
-import users
-import users.views
+import apps.users
+from apps.users import views as userView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView,TokenVerifyView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('userget/<int:id>/', users.views.userGet.as_view()),
-    path('usergetall/', users.views.userGetAll.as_view()),
-    path('usercreate/', users.views.userPost.as_view()),
-    path('userupdate/', users.views.userUpdate.as_view()),
-    path('userdelete/<int:id>/', users.views.userDelete.as_view()),
-    path('roleget/<int:id>/', users.views.roleGet.as_view()),
-    path('rolegetall/', users.views.roleGetAll.as_view()),
-    path('rolecreate/', users.views.rolePost.as_view()),
-    path('roleupdate/', users.views.roleUpdate.as_view()),
-    path('roledelete/<int:id>/', users.views.roleDelete.as_view()),
+    path('userget/<int:id>/',userView.userGet.as_view()),
+    path('usergetall/',userView.userGetAll.as_view()),
+    path('usercreate/',userView.userPost.as_view()),
+    path('userupdate/',userView.userUpdate.as_view()),
+    path('userdelete/<int:id>/',userView.userDelete.as_view()),
+    path('roleget/<int:id>/',userView.roleGet.as_view()),
+    path('rolegetall/',userView.roleGetAll.as_view()),
+    path('rolecreate/',userView.rolePost.as_view()),
+    path('roleupdate/',userView.roleUpdate.as_view()),
+    path('roledelete/<int:id>/',userView.roleDelete.as_view()),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
-    path('login/', users.views.login.as_view()),
+    path('login/', userView.login.as_view()),
     # path('api/login/', users.views.CustomLoginView.as_view(), name='login'),
 ]

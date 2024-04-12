@@ -40,12 +40,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
-    'cart',
-    'category','orders','products','wishlist'
+    'apps.users.apps.UsersConfig',
+    'apps.cart.apps.CartConfig',
+    'apps.category.apps.CategoryConfig',
+    'apps.role.apps.RoleConfig',
+    'apps.orders.apps.OrdersConfig',
+    'apps.products.apps.ProductsConfig',
+    'apps.wishlist.apps.WishlistConfig',
+   
 ]
 
 MIDDLEWARE = [

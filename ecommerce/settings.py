@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-
+import pyodbc
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -88,12 +88,12 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'mssql',
         'NAME': 'gsm-store',
         'USER': 'gsm-store_SQLLogin_1',
         'PASSWORD': 'hlo4w89lnq',
         'HOST':'gsm-store.mssql.somee.com',
-        'PORT':'',
+        'PORT':'1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
         },

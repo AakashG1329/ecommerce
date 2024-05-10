@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'apps.orders.apps.OrdersConfig',
     'apps.products.apps.ProductsConfig',
     'apps.wishlist.apps.WishlistConfig',
+    'mssql'
    
 ]
 

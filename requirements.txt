@@ -1,8 +1,7 @@
-django
-pymysql
-djangorestframework
-djangorestframework-simplejwt
-djangorestframework
-markdown
-django-filter
-mssql-django
+Django==5.0.6
+pymysql==1.0.2
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.2.0
+markdown==3.3.6
+django-filter==2.5.0
+django-pyodbc-azure==2.1.0.0

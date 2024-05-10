@@ -89,12 +89,15 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'store_app',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'ENGINE': 'mssql',
+        'NAME': 'gsm-store',
+        'USER': 'gsm-store_SQLLogin_1',
+        'PASSWORD': 'hlo4w89lnq',
+        'HOST':'gsm-store.mssql.somee.com',
+        'PORT':'',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
     }
 }
 # jwt

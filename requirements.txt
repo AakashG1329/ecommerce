@@ -7,3 +7,4 @@ markdown
 django-filter
 # django-pyodbc-azure
 mssql-django
+pyodbc

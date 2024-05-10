@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 from  ..role import models as roleModel
 
@@ -7,9 +8,9 @@ class User(models.Model):
     name = models.CharField(max_length=255)
     username=models.CharField(max_length=255)
     email = models.EmailField()
-    password = models.CharField(max_length=30)
+    password = models.CharField(max_length=255)
     phone_no = models.CharField(null=True,max_length=255)
-    created_date = models.DateField()
+    created_date = models.DateField(default=datetime.now())
     updated_date = models.DateField(null=True)
     status = models.IntegerField(default=1)
     # role_data = models.ManyToManyField(Role)

@@ -112,6 +112,8 @@ class userPost(APIView):
                 if User.objects.filter(username=username).exists():
                     msg = {"code": status.HTTP_400_BAD_REQUEST, 'msg': 'Username Already Exists'}
                     return Response(msg, status=status.HTTP_400_BAD_REQUEST)
+                print(serializer)
+                
                 serializer.save()
                 msg = {"code": status.HTTP_201_CREATED, 'msg': 'User_Data Created Successfully',
                        'data': serializer.data}

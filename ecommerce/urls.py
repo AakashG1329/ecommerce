@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('userget/<int:id>/',userView.userGet.as_view()),
     path('usergetall/',userView.userGetAll.as_view()),
-    path('usercreate/',userView.userPost.as_view()),
+    path('user/create/',userView.userPost.as_view()),
     path('userupdate/',userView.userUpdate.as_view()),
     path('userdelete/<int:id>/',userView.userDelete.as_view()),
     path('roleget/<int:id>/',userView.roleGet.as_view()),

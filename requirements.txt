@@ -6,6 +6,5 @@ djangorestframework-simplejwt
 markdown
 django-filter
 # django-pyodbc-azure
-mssql-django
 pyodbc
 mssql-django

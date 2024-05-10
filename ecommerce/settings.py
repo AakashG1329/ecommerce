@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'mssql',
         'NAME': 'gsm-store',
         'USER': 'gsm-store_SQLLogin_1',
         'PASSWORD': 'hlo4w89lnq',
